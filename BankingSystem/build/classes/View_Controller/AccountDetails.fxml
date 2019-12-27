@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="371.0" prefWidth="347.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.AccountDetailsController">
+   <children>
+      <HBox id="container" layoutX="1.0" layoutY="327.0" prefHeight="44.0" prefWidth="345.0" stylesheets="@AccountDetails.css">
+         <children>
+            <Pane id="account" prefHeight="34.0" prefWidth="35.0" stylesheets="@AccountDetails.css">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Pane>
+            <Pane id="Transfer" onMouseClicked="#Transfer" prefHeight="44.0" prefWidth="35.0" stylesheets="@AccountDetails.css">
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </Pane>
+            <Pane id="BillPay" onMouseClicked="#deposit" prefHeight="44.0" prefWidth="35.0" stylesheets="@AccountDetails.css">
+               <HBox.margin>
+                  <Insets left="60.0" />
+               </HBox.margin>
+            </Pane>
+            <Pane id="deposit" onMouseClicked="#withdraws" prefHeight="44.0" prefWidth="35.0" stylesheets="@AccountDetails.css">
+               <HBox.margin>
+                  <Insets left="80.0" />
+               </HBox.margin>
+            </Pane>
+         </children>
+      </HBox>
+      <ListView fx:id="ListView" layoutX="-1.0" layoutY="85.0" onMouseClicked="#listclicked" prefHeight="242.0" prefWidth="345.0" />
+      <MenuButton fx:id="myMenuBar" layoutX="227.0" layoutY="14.0" mnemonicParsing="false" text="Account">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#Logout" text="Logout" />
+        </items>
+      </MenuButton>
+   </children>
+</AnchorPane>

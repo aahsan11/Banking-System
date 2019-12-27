@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="421.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.MoreAccountDetailsController">
+   <children>
+      <Label fx:id="BalanceLabel" layoutY="70.0" prefHeight="44.0" prefWidth="351.0" style="-fx-background-color: White;" />
+      <ListView fx:id="ListView" layoutY="114.0" prefHeight="261.0" prefWidth="351.0" />
+      <HBox id="container" layoutX="3.0" layoutY="377.0" prefHeight="44.0" prefWidth="345.0" stylesheets="@AccountDetails.css">
+         <children>
+            <Pane id="account" onMouseClicked="#Account" prefHeight="34.0" prefWidth="35.0" stylesheets="@AccountDetails.css">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Pane>
+            <Pane id="Transfer" onMouseClicked="#Transfer" prefHeight="44.0" prefWidth="35.0" stylesheets="@AccountDetails.css">
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </Pane>
+            <Pane id="BillPay" onMouseClicked="#Deposit" prefHeight="44.0" prefWidth="35.0" stylesheets="@AccountDetails.css">
+               <HBox.margin>
+                  <Insets left="60.0" />
+               </HBox.margin>
+            </Pane>
+            <Pane id="deposit" onMouseClicked="#Withdraws" prefHeight="44.0" prefWidth="35.0" stylesheets="@AccountDetails.css">
+               <HBox.margin>
+                  <Insets left="80.0" />
+               </HBox.margin>
+            </Pane>
+         </children>
+      </HBox>
+      <TextField fx:id="ConfirmationNo" layoutX="97.0" layoutY="27.0" prefHeight="25.0" prefWidth="158.0" promptText="Confirmation No" />
+      <Button layoutX="255.0" layoutY="27.0" mnemonicParsing="false" onAction="#Search" prefHeight="25.0" prefWidth="65.0" text="Search" />
+      <Button layoutX="320.0" layoutY="27.0" mnemonicParsing="false" onAction="#Clear" prefHeight="25.0" prefWidth="65.0" text="Clear" />
+   </children>
+</AnchorPane>

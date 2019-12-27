@@ -1,0 +1,55 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 5, 2019, 10:30:53 AM
+    Author     : Hp
+*/
+
+#container{
+    -fx-background-color:white;
+
+
+
+}
+
+#account{
+  -fx-background-color:white;
+-fx-background-image:url("account.png");
+-fx-background-repeat:no-repeat;
+-fx-background-position:left;
+
+
+
+}
+#Transfer{
+  -fx-background-color:white;
+-fx-background-image:url("transfer.png");
+-fx-background-repeat:no-repeat;
+-fx-background-position:left;
+
+
+
+}
+#BillPay{
+  -fx-background-color:white;
+-fx-background-image:url("BillPay.png");
+-fx-background-repeat:no-repeat;
+-fx-background-position:left;
+
+
+
+}
+
+
+#deposit{
+  -fx-background-color:white;
+-fx-background-image:url("deposit.jpg");
+-fx-background-repeat:no-repeat;
+-fx-background-position:left;
+
+
+
+}

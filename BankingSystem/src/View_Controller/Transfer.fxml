@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="356.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.TransferController">
+   <children>
+      <ComboBox fx:id="AccountCombo" layoutX="84.0" layoutY="43.0" prefWidth="150.0" />
+      <Label layoutX="29.0" layoutY="47.0" prefHeight="17.0" prefWidth="40.0" text="To" />
+      <TextField fx:id="TransferAmount" layoutX="85.0" layoutY="119.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="29.0" layoutY="86.0" text="Date" />
+      <Label layoutX="29.0" layoutY="123.0" text="Amount" />
+      <TextField fx:id="Notes" layoutX="86.0" layoutY="162.0" />
+      <Label layoutX="24.0" layoutY="166.0" prefHeight="17.0" prefWidth="51.0" text="Notes" />
+      <Button layoutX="159.0" layoutY="224.0" mnemonicParsing="false" onAction="#Submit" prefHeight="25.0" prefWidth="63.0" text="Submit" />
+      <HBox id="container" layoutX="-3.0" layoutY="349.0" prefHeight="50.0" prefWidth="363.0" stylesheets="@AccountDetails.css">
+         <children>
+            <Pane id="account" onMouseClicked="#Account" prefHeight="34.0" prefWidth="35.0" stylesheets="@AccountDetails.css">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Pane>
+            <Pane id="Transfer" prefHeight="44.0" prefWidth="35.0" stylesheets="@AccountDetails.css">
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </Pane>
+            <Pane id="BillPay" onMouseClicked="#Deposit" prefHeight="44.0" prefWidth="35.0" stylesheets="@AccountDetails.css">
+               <HBox.margin>
+                  <Insets left="60.0" />
+               </HBox.margin>
+            </Pane>
+            <Pane id="deposit" onMouseClicked="#Withdraw" prefHeight="44.0" prefWidth="35.0" stylesheets="@AccountDetails.css">
+               <HBox.margin>
+                  <Insets left="80.0" />
+               </HBox.margin>
+            </Pane>
+         </children>
+      </HBox>
+      <DatePicker fx:id="TransferDate" layoutX="79.0" layoutY="82.0" prefHeight="25.0" prefWidth="157.0" />
+   </children>
+</AnchorPane>
